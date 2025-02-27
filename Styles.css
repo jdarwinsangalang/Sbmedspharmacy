@@ -1,0 +1,227 @@
+/* Logo Styles */
+.logo {
+    width: 100%;  /* Adjust size as needed */
+    height: 50px;  /* Maintain aspect ratio */
+}
+
+/* Apply Background Image Globally */
+body {
+    background-image: url('Images/background.jpg'); /* Replace with your image path */
+    background-size: cover;  /* Ensures the image fully covers the viewport */
+    background-position: center; /* Centers the background */
+    background-repeat: no-repeat;
+    min-height: 100vh; /* Ensures it covers the full screen */
+}
+
+/* Ensure Content is Readable */
+.all-products {
+    background: rgba(255, 255, 255, 0.9); /* Light overlay for readability */
+    padding: 80px 0;
+    min-height: 100vh;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    body {
+        background-size: contain; /* Adjusts image to fit smaller screens */
+    }
+    
+    .all-products {
+        background: rgba(255, 255, 255, 0.95); /* Darker overlay for better readability */
+    }
+}
+
+/* Header (No Sticky) */
+header {
+    height: 80px; /* Adjust as needed */
+    background-color: rgba(255, 255, 255, 0.8); /* Optional: Adds transparency */
+    width: 100%;
+}
+
+/* Responsive Design for EXACT Screen Sizes */
+@media (max-width: 1920px) and (max-height: 947px) and (orientation: landscape) {
+    .container { max-width: 85%; }
+}
+
+@media (max-width: 1080px) and (max-height: 810px) and (orientation: landscape) {
+    .container { max-width: 80%; }
+}
+
+@media (max-width: 810px) and (max-height: 1080px) and (orientation: portrait) {
+    .container { max-width: 85%; }
+}
+
+@media (max-width: 854px) and (max-height: 485px) and (orientation: landscape) {
+    .container { max-width: 90%; }
+}
+
+@media (max-width: 384px) and (max-height: 854px) and (orientation: portrait) {
+    .container { max-width: 95%; }
+}
+
+/* Adjustments for Smaller Screens */
+@media (max-width: 768px) {
+    body {
+        height: 100vh; /* Full height for smaller screens */
+    }
+    header {
+        height: 60px; /* Make navbar smaller on phones */
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        background-image: url('Assets/Images/pexels-kampus-8476591.jpg');
+        background-size: contain; /* Ensures the whole image is visible */
+        background-position: top;
+    }
+}
+/* Background Container (50% Screen Height) */
+.bg-container {
+    position: relative; /* Keeps it inside the normal flow */
+    width: 100vw; /* Full width */
+    height: 50vh; /* Half the screen height */
+    background-image: url('Assets/Images/pexels-kampus-8476591.jpg'); /* Image path */
+    background-size: cover; /* Ensures full coverage */
+    background-position: center; /* Centers the image */
+    background-repeat: no-repeat; /* Prevents tiling */
+    margin-bottom: 20px; /* Adds space below */
+}
+
+/* Adjust for Landscape Mode */
+@media (orientation: landscape) {
+    .bg-container {
+        height: 40vh; /* Slightly smaller in landscape */
+        background-position: center center; /* Ensures proper centering */
+    }
+}
+
+/* Adjust for Small Screens */
+@media (max-width: 768px) {
+    .bg-container {
+        height: 45vh; /* Slightly larger on small screens */
+        background-size: contain; /* Ensures full image visibility */
+    }
+}
+/* Ensure all images have the same height */
+.card-img-top {
+    width: 100%; /* Ensures images fill the card width */
+    height: 200px; /* Set a fixed height for consistency */
+    object-fit: cover; /* Ensures images are cropped to fit without stretching */
+    border-top-left-radius: 10px; /* Optional: Adds rounded corners */
+    border-top-right-radius: 10px;
+}
+
+/* Adjust for responsiveness */
+@media (max-width: 768px) {
+    .card-img-top {
+        height: 180px; /* Slightly smaller for mobile screens */
+    }
+}
+.card {
+    width: 100%;
+    max-width: 18rem;
+}
+
+.fixed-size-img {
+    height: 200px;
+    object-fit: cover;
+}
+
+
+/* Force 2 Products per Row in Portrait Mode */
+@media (orientation: portrait) {
+    .col-sm-6 {
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+}
+
+@media (orientation: landscape) {
+    .col-sm-6 {
+        flex: 0 0 33.33%;
+        max-width: 33.33%;
+    }
+}
+/*Article Section*/
+.article-section {
+    background-image: url('Assets/Images/pexels-duy-tan-d-i-h-c-842966226-30902100.jpg'); /* Add your leaf background image */
+    background-size: cover;  /* Ensures full coverage */
+    background-position: center; /* Keeps it centered */
+    background-repeat: no-repeat;
+    min-height: 5vh; /* Adjusts height to 60% of the screen */
+    display: flex;
+    align-items: center; /* Centers content vertically */
+    justify-content: center; /* Centers content horizontally */
+    padding: 40px 0; /* Adds space around text */
+    font-family: 'Lato', sans-serif;
+}
+
+.article-content {
+    max-width: 100%; /* Keeps text readable */
+    font-size: 1.1rem; /* Adjusts text size */
+    line-height: 1.6; /* Improves readability */
+    color: white; /* Ensures contrast with background */
+    background: rgba(0, 100, 0, 0.7); /* Dark green overlay for readability */
+    padding: 20px;
+    border-radius: 20px; /* Softens edges */
+}
+/* Global Heading Styles */
+h1, h2 {
+    font-family: 'Poppins', sans-serif; /* Choose from list above */
+    font-weight: 700; /* Bold for better emphasis */
+    text-transform: uppercase; /* Keeps it clean and professional */
+    letter-spacing: 1px; /* Improves readability */
+}
+
+/* H1 Specific Styles */
+h1 {
+    font-size: 2.5rem;
+    color: #004d40; /* Deep medical green */
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* H2 Specific Styles */
+h2 {
+    font-size: 2rem;
+    color: #00796b; /* Slightly lighter green */
+    text-align: center;
+    margin-bottom: 15px;
+}
+.storyline-section {
+    background-color: #ffebef; /* Light pink background */
+    padding: 60px 0;
+}
+
+.storyline-content {
+    font-family: 'Lato', sans-serif;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    text-align: justify;
+}
+.image-container {
+    position: relative;
+    width: 100%;
+}
+
+.bg-image {
+    width: 100%;
+    height: auto;
+}
+
+.overlay-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    color: white;
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+}
+
+
+
+
